@@ -16,6 +16,10 @@ export class UserController {
   async findAll(): Promise<User[]> {
     return this.userService.findAll();
   }
+  @Get('cc')
+  getHello(): string {
+    return 'hello world';
+  }
 
   @Get(':id')
   async findOne(@Param('id') id: string): Promise<User> {
